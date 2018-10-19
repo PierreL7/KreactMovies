@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Loading View-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="BoxOfficePage" id="BYZ-38-t0r" customClass="LoadingView" customModule="KreactMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kreactMovieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Tu0-lO-ewN">
+                                <rect key="frame" x="37.5" y="167" width="300" height="333.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="KreactMovie" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="45" translatesAutoresizingMaskIntoConstraints="NO" id="JLn-DT-vDv">
+                                <rect key="frame" x="101.5" y="90" width="172.5" height="66.5"/>
+                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="65"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eli-QG-BW3">
+                                <rect key="frame" x="177.5" y="508" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JLn-DT-vDv" firstAttribute="top" secondItem="dRQ-DZ-bUJ" secondAttribute="top" constant="70" id="2Wc-aN-czJ"/>
+                            <constraint firstItem="Tu0-lO-ewN" firstAttribute="centerX" secondItem="dRQ-DZ-bUJ" secondAttribute="centerX" id="BYS-1P-oBe"/>
+                            <constraint firstItem="JLn-DT-vDv" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.1" id="TRF-HT-AiG"/>
+                            <constraint firstItem="Tu0-lO-ewN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bis-5C-6WN"/>
+                            <constraint firstItem="eli-QG-BW3" firstAttribute="centerX" secondItem="dRQ-DZ-bUJ" secondAttribute="centerX" id="brD-f3-kpf"/>
+                            <constraint firstItem="Tu0-lO-ewN" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="eo4-6u-AcX"/>
+                            <constraint firstItem="Tu0-lO-ewN" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="lmU-zy-sdH"/>
+                            <constraint firstItem="JLn-DT-vDv" firstAttribute="centerX" secondItem="dRQ-DZ-bUJ" secondAttribute="centerX" id="mI7-zd-0SI"/>
+                            <constraint firstItem="eli-QG-BW3" firstAttribute="top" secondItem="Tu0-lO-ewN" secondAttribute="bottom" constant="7.5" id="o32-OJ-Fw5"/>
+                            <constraint firstItem="JLn-DT-vDv" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.46" id="qCn-jG-cjh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dRQ-DZ-bUJ"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="eli-QG-BW3" id="XLJ-lX-3kj"/>
+                        <segue destination="bsb-Wf-bIS" kind="show" identifier="BoxOfficeSegue" id="fc8-5v-zXH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1702" y="-18"/>
+        </scene>
+        <!--Box Office Page View Controller-->
+        <scene sceneID="pEW-S7-Zkz">
+            <objects>
+                <viewController id="bsb-Wf-bIS" customClass="BoxOfficePageViewController" customModule="KreactMovie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k7U-ty-3l2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y27-mc-5iF" customClass="SearchBarView" customModule="KreactMovie" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kreactMovieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="NMA-L1-8tH">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="80"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Box Office" textAlignment="natural" lineBreakMode="tailTruncation" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="aim-mW-ChU">
+                                        <rect key="frame" x="83" y="32" width="82.5" height="16"/>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="shP-uW-dqg">
+                                        <rect key="frame" x="178" y="12" width="150" height="56"/>
+                                        <color key="barTintColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                </subviews>
+                                <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="NMA-L1-8tH" firstAttribute="height" secondItem="Y27-mc-5iF" secondAttribute="height" id="4TX-Md-jHp"/>
+                                    <constraint firstItem="NMA-L1-8tH" firstAttribute="width" secondItem="Y27-mc-5iF" secondAttribute="width" multiplier="0.2" id="ESL-Zf-VbY"/>
+                                    <constraint firstItem="NMA-L1-8tH" firstAttribute="centerY" secondItem="Y27-mc-5iF" secondAttribute="centerY" id="Jzc-9i-TGW"/>
+                                    <constraint firstItem="shP-uW-dqg" firstAttribute="leading" secondItem="aim-mW-ChU" secondAttribute="trailing" constant="12.5" id="MY6-Wc-pUv"/>
+                                    <constraint firstItem="aim-mW-ChU" firstAttribute="width" secondItem="Y27-mc-5iF" secondAttribute="width" multiplier="0.22" id="QE1-xd-ZCp"/>
+                                    <constraint firstItem="aim-mW-ChU" firstAttribute="leading" secondItem="NMA-L1-8tH" secondAttribute="trailing" constant="8" id="Xsf-Sk-QZ7"/>
+                                    <constraint firstItem="NMA-L1-8tH" firstAttribute="leading" secondItem="Y27-mc-5iF" secondAttribute="leading" id="ZvR-Tc-LvU"/>
+                                    <constraint firstItem="aim-mW-ChU" firstAttribute="height" secondItem="Y27-mc-5iF" secondAttribute="height" multiplier="0.2" id="alm-gk-y9L"/>
+                                    <constraint firstItem="shP-uW-dqg" firstAttribute="width" secondItem="Y27-mc-5iF" secondAttribute="width" multiplier="0.4" id="cXt-F1-C9p"/>
+                                    <constraint firstItem="aim-mW-ChU" firstAttribute="centerY" secondItem="Y27-mc-5iF" secondAttribute="centerY" id="cq8-Jt-O8r"/>
+                                    <constraint firstItem="shP-uW-dqg" firstAttribute="centerY" secondItem="aim-mW-ChU" secondAttribute="centerY" id="zzF-q2-S64"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="searchBar" destination="shP-uW-dqg" id="Vym-Aq-YP4"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-gS-si3" customClass="MoviesTableView" customModule="KreactMovie" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="108" width="375" height="559"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="iXI-mZ-akC">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="559"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="iXI-mZ-akC" firstAttribute="top" secondItem="x3v-gS-si3" secondAttribute="top" id="O6L-iy-XST"/>
+                                    <constraint firstAttribute="trailing" secondItem="iXI-mZ-akC" secondAttribute="trailing" id="age-qF-noF"/>
+                                    <constraint firstItem="iXI-mZ-akC" firstAttribute="leading" secondItem="x3v-gS-si3" secondAttribute="leading" id="cgB-Xx-NNk"/>
+                                    <constraint firstAttribute="bottom" secondItem="iXI-mZ-akC" secondAttribute="bottom" id="jlf-kW-JuB"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="tableView" destination="iXI-mZ-akC" id="gZT-nX-aoe"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y27-mc-5iF" firstAttribute="top" secondItem="kHA-Ul-F4e" secondAttribute="top" id="4R3-Xp-8BO"/>
+                            <constraint firstItem="kHA-Ul-F4e" firstAttribute="bottom" secondItem="x3v-gS-si3" secondAttribute="bottom" id="7ku-lD-7Ri"/>
+                            <constraint firstItem="Y27-mc-5iF" firstAttribute="width" secondItem="k7U-ty-3l2" secondAttribute="width" id="ATp-KR-0Zf"/>
+                            <constraint firstItem="x3v-gS-si3" firstAttribute="centerX" secondItem="kHA-Ul-F4e" secondAttribute="centerX" id="Bvo-l7-4b6"/>
+                            <constraint firstItem="x3v-gS-si3" firstAttribute="top" secondItem="kHA-Ul-F4e" secondAttribute="top" constant="88" id="LBS-09-u6f"/>
+                            <constraint firstItem="Y27-mc-5iF" firstAttribute="height" secondItem="k7U-ty-3l2" secondAttribute="height" multiplier="0.12" id="ilS-mt-QFW"/>
+                            <constraint firstItem="Y27-mc-5iF" firstAttribute="centerX" secondItem="kHA-Ul-F4e" secondAttribute="centerX" id="xQ9-8f-XpL"/>
+                            <constraint firstItem="x3v-gS-si3" firstAttribute="width" secondItem="k7U-ty-3l2" secondAttribute="width" id="ytA-7d-iZZ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kHA-Ul-F4e"/>
+                    </view>
+                    <connections>
+                        <outlet property="moviesTableView" destination="x3v-gS-si3" id="A10-cg-5a4"/>
+                        <outlet property="searchBarView" destination="Y27-mc-5iF" id="HNh-mO-CKH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FUg-n4-I7U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2944.8000000000002" y="-18.440779610194905"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kreactMovieLogo" width="567" height="567"/>
+    </resources>
+</document>
