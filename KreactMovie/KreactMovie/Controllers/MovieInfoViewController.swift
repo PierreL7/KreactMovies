@@ -11,6 +11,9 @@ import UIKit
 class MovieInfoViewController: UIViewController {
     
     @IBOutlet weak var mainInfo : MovieMainInfoView!
+    @IBOutlet weak var trailerView : TrailerView!
+    @IBOutlet weak var synopsisView : SynopsisView!
+
     var movie : Movie!
     var actors : [Actor]!
     var crewMembers : [CrewMember]!
@@ -19,10 +22,17 @@ class MovieInfoViewController: UIViewController {
         super.viewDidLoad()
         
         JSONReader._sharedInstance.crewDelegate = self
+        JSONReader._sharedInstance.trailerDelegate = self
+        
         if let movieId = movie.Id {
             APIManager._sharedInstance.getMovieCreditsByID(id: movieId)
+            APIManager._sharedInstance.getTrailerByMovieId(id: movieId)
+        }
+        if let synopsis = movie.Overview {
+            synopsisView.setSynopsis(synopsis: synopsis)
         }
         mainInfo.mainInfo(movie: movie)
+        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.handleGesture(gesture:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
@@ -44,7 +54,10 @@ class MovieInfoViewController: UIViewController {
 }
 
 //Delegates Functions
-extension MovieInfoViewController: CrewDelegate {
+extension MovieInfoViewController: CrewDelegate, TrailerDelegate {
+    func trailerReceived(videoKey: String, site: String) {
+        trailerView.getTrailer(videoKey: videoKey)
+    }
     
     func crewReceived(actorList: [Actor], crewMemberList: [CrewMember]) {
         actors = actorList

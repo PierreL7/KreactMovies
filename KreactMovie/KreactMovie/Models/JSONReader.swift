@@ -19,9 +19,9 @@ struct Result: Decodable {
     let vote_count : Int
     let id : Int
     let video : Bool
-    let vote_average : Float
+    let vote_average : Double
     let title : String
-    let popularity : Float
+    let popularity : Double
     let poster_path : String
     let original_language : String
     let original_title : String
@@ -56,6 +56,17 @@ struct CrewM: Decodable {
     let name : String
 }
 
+struct Trailer: Decodable {
+    let id : Int
+    let results: [TrailerInfos]
+}
+
+struct TrailerInfos: Decodable {
+    let key : String
+    let name : String
+    let site : String
+}
+
 protocol MovieDelegate {
     func movieListReceived(list: [Movie])
 }
@@ -64,11 +75,16 @@ protocol CrewDelegate {
     func crewReceived(actorList: [Actor], crewMemberList: [CrewMember])
 }
 
+protocol TrailerDelegate {
+    func trailerReceived(videoKey: String, site: String)
+}
+
 class JSONReader: NSObject {
     
     static var _sharedInstance: JSONReader = JSONReader()
     var movieDelegate : MovieDelegate?
     var crewDelegate : CrewDelegate?
+    var trailerDelegate : TrailerDelegate?
     
     func decodeCurrentMovies(withData: Data) {
         var movieList = [Movie]()
@@ -82,6 +98,8 @@ class JSONReader: NSObject {
                 movie.Overview = m.overview
                 movie.releaseDate = m.release_date
                 movie.Id = m.id
+                movie.Popularity = m.popularity
+                movie.voteAverage = m.vote_average
                 movieList.append(movie)
             }
             movieDelegate?.movieListReceived(list: movieList)
@@ -108,6 +126,17 @@ class JSONReader: NSObject {
                 crewMemberList.append(crewMember)
             }
             crewDelegate?.crewReceived(actorList: actorList, crewMemberList: crewMemberList)
+        } catch let jsonErr {
+            print(jsonErr)
+        }
+    }
+    
+    func decodeTrailer(withData: Data) {
+        do {
+            let trailers = try JSONDecoder().decode(Trailer.self, from: withData)
+            if let videoKey = trailers.results.first?.key {
+                trailerDelegate?.trailerReceived(videoKey: videoKey, site: trailers.results.first?.site ?? "youtube")
+            }
         } catch let jsonErr {
             print(jsonErr)
         }

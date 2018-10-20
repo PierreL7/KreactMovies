@@ -50,6 +50,21 @@ class APIManager: NSObject {
         }
     }
     
+    func getTrailerByMovieId(id: Int) {
+        guard let urlToCall = URL(string: "\(theMovieDbUrl)/3/movie/\(id)/videos?api_key=\(apiKey)") else {return}
+        if UIApplication.shared.canOpenURL(urlToCall) {
+            var request = URLRequest(url: urlToCall)
+            request.httpMethod = "GET"
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let receivedData = data {
+                    JSONReader._sharedInstance.decodeTrailer(withData: receivedData)
+                }
+            }
+            task.resume()
+        }
+    }
+    
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
             URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }

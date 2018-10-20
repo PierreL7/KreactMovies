@@ -15,5 +15,7 @@ class Movie: NSObject {
     var Overview : String?
     var Poster : UIImage?
     var Backdrop : UIImage?
+    var Popularity : Double?
+    var voteAverage : Double?
     var Id : Int?
 }

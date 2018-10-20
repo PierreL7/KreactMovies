@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cosmos
 
 class MovieMainInfoView: UIView {
 
@@ -14,10 +15,19 @@ class MovieMainInfoView: UIView {
     @IBOutlet weak var releaseDate : UILabel!
     @IBOutlet weak var From : UILabel!
     @IBOutlet weak var Image : UIImageView!
+    @IBOutlet weak var Popularity : UILabel!
+    @IBOutlet weak var Rating : CosmosView!
+    @IBOutlet weak var RatingLabel : UILabel!
 
     func mainInfo(movie : Movie) {
         Title.text = movie.Title
         Image.image = movie.Backdrop
         releaseDate.text = movie.releaseDate
+        Rating.settings.updateOnTouch = false
+        guard let rate = movie.voteAverage else {return}
+        Rating.rating = rate / 2
+        RatingLabel.text = String(rate / 2)
+        guard let popularity = movie.Popularity else {return}
+        Popularity.text = String(popularity)
     }
 }
