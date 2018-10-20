@@ -21,7 +21,7 @@ class LoadingView: UIViewController {
         
         APIManager._sharedInstance.getCurrentMovies()
         activityIndicator.startAnimating()
-        JSONReader._sharedInstance.delegate = self
+        JSONReader._sharedInstance.movieDelegate = self
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -35,6 +35,7 @@ class LoadingView: UIViewController {
 
 // Delegate functions
 extension LoadingView: MovieDelegate {
+    
     func movieListReceived(list: [Movie]) {
         movieList = list
         //Using sleep so the transition is not happening to fast

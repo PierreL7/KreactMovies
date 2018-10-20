@@ -13,5 +13,7 @@ class Movie: NSObject {
     var Title : String?
     var releaseDate : String?
     var Overview : String?
-    var Image : UIImage?
+    var Poster : UIImage?
+    var Backdrop : UIImage?
+    var Id : Int?
 }

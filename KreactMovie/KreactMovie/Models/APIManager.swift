@@ -13,7 +13,7 @@ class APIManager: NSObject {
     static var _sharedInstance: APIManager = APIManager()
     
     private let theMovieDbUrl : String = "https://api.themoviedb.org/"
-    private let imageUrl : String = "https://image.tmdb.org/t/p/w92/"
+    private let imageUrl : String = "https://image.tmdb.org/t/p/"
     private let apiKey : String = "daa8d287ad543aa14c94ea12c0717f87"
 
     
@@ -35,15 +35,38 @@ class APIManager: NSObject {
         }
     }
     
+    func getMovieCreditsByID(id: Int) {
+        guard let urlToCall = URL(string: "\(theMovieDbUrl)/3/movie/\(id)/credits?api_key=\(apiKey)") else {return}
+        if UIApplication.shared.canOpenURL(urlToCall) {
+            var request = URLRequest(url: urlToCall)
+            request.httpMethod = "GET"
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let receivedData = data {
+                    JSONReader._sharedInstance.decodeMovieCredits(withData: receivedData)
+                }
+            }
+            task.resume()
+        }
+    }
+    
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
             URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
-    func downloadImages(from path : String, with movie : Movie) {
-        guard let url = URL(string: "\(imageUrl)\(path)") else {return}
+    func downloadPoster(from path : String, with width : String, with movie : Movie) {
+        guard let url = URL(string: "\(imageUrl)/\(width)/\(path)") else {return}
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            movie.Image = UIImage(data: data)
+            movie.Poster = UIImage(data: data)
+        }
+    }
+    
+    func downloadBackdrop(from path : String, with width : String, with movie : Movie) {
+        guard let url = URL(string: "\(imageUrl)/\(width)/\(path)") else {return}
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            movie.Backdrop = UIImage(data: data)
         }
     }
 }

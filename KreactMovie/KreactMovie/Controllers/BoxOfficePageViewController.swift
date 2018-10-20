@@ -13,6 +13,7 @@ class BoxOfficePageViewController: UIViewController {
     @IBOutlet weak var searchBarView : SearchBarView!
     @IBOutlet weak var moviesTableView : MoviesTableView!
     var movieList = [Movie]()
+    var movieSelected : Movie!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +22,21 @@ class BoxOfficePageViewController: UIViewController {
         moviesTableView.movieDetailsDelegate = self
         moviesTableView.createTableView(movies: movieList)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "ShowMovieDetails") {
+            if let destVC = segue.destination as? MovieInfoViewController {
+                destVC.movie = movieSelected
+            }
+        }
+    }
 }
 
 //Delegates functions
 extension BoxOfficePageViewController : MovieDetails {
+    
     func showMovieDetails(movie: Movie) {
+        movieSelected = movie
         self.performSegue(withIdentifier: "ShowMovieDetails", sender: self)
     }
 }

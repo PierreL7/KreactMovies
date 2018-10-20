@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7788CBA83706D7A9F15FE9F7 /* Pods_KreactMovie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C74AFAA7DE6499D2DE2B53D0 /* Pods_KreactMovie.framework */; };
+		7F037B7A217B6516003E8A3E /* MovieMainInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F037B79217B6516003E8A3E /* MovieMainInfoView.swift */; };
+		7F037B7C217B6560003E8A3E /* MovieInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F037B7B217B6560003E8A3E /* MovieInfoViewController.swift */; };
+		7F037B7E217B6D62003E8A3E /* Actor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F037B7D217B6D62003E8A3E /* Actor.swift */; };
+		7F037B80217B6D9A003E8A3E /* CrewMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F037B7F217B6D9A003E8A3E /* CrewMember.swift */; };
 		7FB5D3852179EF5B00477E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3842179EF5B00477E6D /* AppDelegate.swift */; };
 		7FB5D3872179EF5B00477E6D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3862179EF5B00477E6D /* LoadingView.swift */; };
 		7FB5D38A2179EF5B00477E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5D3882179EF5B00477E6D /* Main.storyboard */; };
@@ -22,6 +27,8 @@
 		7FB5D3C2217A270400477E6D /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3C1217A270400477E6D /* SearchBarView.swift */; };
 		7FB5D3C4217A2BCE00477E6D /* MoviesTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3C3217A2BCE00477E6D /* MoviesTableView.swift */; };
 		7FB5D3C6217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3C5217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift */; };
+		AB9DCAC699A0481C0921FDB4 /* Pods_KreactMovieTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38686CA99AA10FB898D9A59D /* Pods_KreactMovieTests.framework */; };
+		B5DACF2EA40D408AC2D83DAE /* Pods_KreactMovieUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A76AACB70D91052F181C3283 /* Pods_KreactMovieUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +49,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		38686CA99AA10FB898D9A59D /* Pods_KreactMovieTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KreactMovieTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F037B79217B6516003E8A3E /* MovieMainInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieMainInfoView.swift; sourceTree = "<group>"; };
+		7F037B7B217B6560003E8A3E /* MovieInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieInfoViewController.swift; sourceTree = "<group>"; };
+		7F037B7D217B6D62003E8A3E /* Actor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Actor.swift; sourceTree = "<group>"; };
+		7F037B7F217B6D9A003E8A3E /* CrewMember.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrewMember.swift; sourceTree = "<group>"; };
 		7FB5D3812179EF5A00477E6D /* KreactMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreactMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB5D3842179EF5B00477E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB5D3862179EF5B00477E6D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
@@ -63,6 +75,14 @@
 		7FB5D3C1217A270400477E6D /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		7FB5D3C3217A2BCE00477E6D /* MoviesTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableView.swift; sourceTree = "<group>"; };
 		7FB5D3C5217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCustomCellTableViewCell.swift; sourceTree = "<group>"; };
+		879551E46F843B3CCC1CD08A /* Pods-KreactMovieTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KreactMovieTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KreactMovieTests/Pods-KreactMovieTests.debug.xcconfig"; sourceTree = "<group>"; };
+		89D8AC1E53F02897BCCFA645 /* Pods-KreactMovie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KreactMovie.release.xcconfig"; path = "Pods/Target Support Files/Pods-KreactMovie/Pods-KreactMovie.release.xcconfig"; sourceTree = "<group>"; };
+		95E23F5E988457A6A928B93D /* Pods-KreactMovie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KreactMovie.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KreactMovie/Pods-KreactMovie.debug.xcconfig"; sourceTree = "<group>"; };
+		A76AACB70D91052F181C3283 /* Pods_KreactMovieUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KreactMovieUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFE7709365E7709E07040D99 /* Pods-KreactMovieUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KreactMovieUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KreactMovieUITests/Pods-KreactMovieUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B63A41ED86D63245E4B8B3BB /* Pods-KreactMovieUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KreactMovieUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KreactMovieUITests/Pods-KreactMovieUITests.release.xcconfig"; sourceTree = "<group>"; };
+		BA1E3C4E6D52CC4D1CED7177 /* Pods-KreactMovieTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KreactMovieTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-KreactMovieTests/Pods-KreactMovieTests.release.xcconfig"; sourceTree = "<group>"; };
+		C74AFAA7DE6499D2DE2B53D0 /* Pods_KreactMovie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_KreactMovie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7788CBA83706D7A9F15FE9F7 /* Pods_KreactMovie.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB9DCAC699A0481C0921FDB4 /* Pods_KreactMovieTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,12 +106,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5DACF2EA40D408AC2D83DAE /* Pods_KreactMovieUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1012186006BB682DDF921412 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95E23F5E988457A6A928B93D /* Pods-KreactMovie.debug.xcconfig */,
+				89D8AC1E53F02897BCCFA645 /* Pods-KreactMovie.release.xcconfig */,
+				879551E46F843B3CCC1CD08A /* Pods-KreactMovieTests.debug.xcconfig */,
+				BA1E3C4E6D52CC4D1CED7177 /* Pods-KreactMovieTests.release.xcconfig */,
+				AFE7709365E7709E07040D99 /* Pods-KreactMovieUITests.debug.xcconfig */,
+				B63A41ED86D63245E4B8B3BB /* Pods-KreactMovieUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7FB5D3782179EF5A00477E6D = {
 			isa = PBXGroup;
 			children = (
@@ -97,6 +133,8 @@
 				7FB5D39B2179EF5C00477E6D /* KreactMovieTests */,
 				7FB5D3A62179EF5C00477E6D /* KreactMovieUITests */,
 				7FB5D3822179EF5A00477E6D /* Products */,
+				1012186006BB682DDF921412 /* Pods */,
+				DA3965328F6659A4008853CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -149,6 +187,7 @@
 			children = (
 				7FB5D3862179EF5B00477E6D /* LoadingView.swift */,
 				7FB5D3BF217A18D500477E6D /* BoxOfficePageViewController.swift */,
+				7F037B7B217B6560003E8A3E /* MovieInfoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -159,6 +198,8 @@
 				7FB5D3B82179F4A200477E6D /* APIManager.swift */,
 				7FB5D3BA217A04D000477E6D /* Movie.swift */,
 				7FB5D3BC217A091600477E6D /* JSONReader.swift */,
+				7F037B7D217B6D62003E8A3E /* Actor.swift */,
+				7F037B7F217B6D9A003E8A3E /* CrewMember.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -169,8 +210,19 @@
 				7FB5D3C1217A270400477E6D /* SearchBarView.swift */,
 				7FB5D3C3217A2BCE00477E6D /* MoviesTableView.swift */,
 				7FB5D3C5217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift */,
+				7F037B79217B6516003E8A3E /* MovieMainInfoView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DA3965328F6659A4008853CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C74AFAA7DE6499D2DE2B53D0 /* Pods_KreactMovie.framework */,
+				38686CA99AA10FB898D9A59D /* Pods_KreactMovieTests.framework */,
+				A76AACB70D91052F181C3283 /* Pods_KreactMovieUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +232,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB5D3AC2179EF5C00477E6D /* Build configuration list for PBXNativeTarget "KreactMovie" */;
 			buildPhases = (
+				B789B79E2EA1898066414425 /* [CP] Check Pods Manifest.lock */,
 				7FB5D37D2179EF5A00477E6D /* Sources */,
 				7FB5D37E2179EF5A00477E6D /* Frameworks */,
 				7FB5D37F2179EF5A00477E6D /* Resources */,
+				73EDFCCEE6B61384D1B42357 /* [CP] Embed Pods Frameworks */,
+				5D1CE38CC1E9460CAF17B797 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,9 +252,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB5D3AF2179EF5C00477E6D /* Build configuration list for PBXNativeTarget "KreactMovieTests" */;
 			buildPhases = (
+				26BF4EF5543AC800AA025DFD /* [CP] Check Pods Manifest.lock */,
 				7FB5D3942179EF5C00477E6D /* Sources */,
 				7FB5D3952179EF5C00477E6D /* Frameworks */,
 				7FB5D3962179EF5C00477E6D /* Resources */,
+				0E979A0140D50B11B1F6E4EA /* [CP] Embed Pods Frameworks */,
+				752A89D427E75147F4328CEB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -215,9 +273,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7FB5D3B22179EF5C00477E6D /* Build configuration list for PBXNativeTarget "KreactMovieUITests" */;
 			buildPhases = (
+				C3B18E1EA30AFBE700754819 /* [CP] Check Pods Manifest.lock */,
 				7FB5D39F2179EF5C00477E6D /* Sources */,
 				7FB5D3A02179EF5C00477E6D /* Frameworks */,
 				7FB5D3A12179EF5C00477E6D /* Resources */,
+				0848F41E49B7D9A4339B30EC /* [CP] Embed Pods Frameworks */,
+				7843EF8B791AF745C6710A86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -299,6 +360,156 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0848F41E49B7D9A4339B30EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovieUITests/Pods-KreactMovieUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0E979A0140D50B11B1F6E4EA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovieTests/Pods-KreactMovieTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		26BF4EF5543AC800AA025DFD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KreactMovieTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5D1CE38CC1E9460CAF17B797 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovie/Pods-KreactMovie-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		73EDFCCEE6B61384D1B42357 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovie/Pods-KreactMovie-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovie/Pods-KreactMovie-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		752A89D427E75147F4328CEB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovieTests/Pods-KreactMovieTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7843EF8B791AF745C6710A86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KreactMovieUITests/Pods-KreactMovieUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B789B79E2EA1898066414425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KreactMovie-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3B18E1EA30AFBE700754819 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-KreactMovieUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		7FB5D37D2179EF5A00477E6D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -306,7 +517,10 @@
 			files = (
 				7FB5D3BD217A091600477E6D /* JSONReader.swift in Sources */,
 				7FB5D3B92179F4A200477E6D /* APIManager.swift in Sources */,
+				7F037B7A217B6516003E8A3E /* MovieMainInfoView.swift in Sources */,
 				7FB5D3C0217A18D500477E6D /* BoxOfficePageViewController.swift in Sources */,
+				7F037B80217B6D9A003E8A3E /* CrewMember.swift in Sources */,
+				7F037B7E217B6D62003E8A3E /* Actor.swift in Sources */,
 				7FB5D3C4217A2BCE00477E6D /* MoviesTableView.swift in Sources */,
 				7FB5D3872179EF5B00477E6D /* LoadingView.swift in Sources */,
 				7FB5D3C6217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift in Sources */,
@@ -314,6 +528,7 @@
 				7FB5D3852179EF5B00477E6D /* AppDelegate.swift in Sources */,
 				7FB5D38D2179EF5B00477E6D /* KreactMovie.xcdatamodeld in Sources */,
 				7FB5D3BB217A04D000477E6D /* Movie.swift in Sources */,
+				7F037B7C217B6560003E8A3E /* MovieInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +701,7 @@
 		};
 		7FB5D3AD2179EF5C00477E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95E23F5E988457A6A928B93D /* Pods-KreactMovie.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -505,6 +721,7 @@
 		};
 		7FB5D3AE2179EF5C00477E6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89D8AC1E53F02897BCCFA645 /* Pods-KreactMovie.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -524,6 +741,7 @@
 		};
 		7FB5D3B02179EF5C00477E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 879551E46F843B3CCC1CD08A /* Pods-KreactMovieTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -545,6 +763,7 @@
 		};
 		7FB5D3B12179EF5C00477E6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA1E3C4E6D52CC4D1CED7177 /* Pods-KreactMovieTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -566,6 +785,7 @@
 		};
 		7FB5D3B32179EF5C00477E6D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AFE7709365E7709E07040D99 /* Pods-KreactMovieUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,6 +806,7 @@
 		};
 		7FB5D3B42179EF5C00477E6D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B63A41ED86D63245E4B8B3BB /* Pods-KreactMovieUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

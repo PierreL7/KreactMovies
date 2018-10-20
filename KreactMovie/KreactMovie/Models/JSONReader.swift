@@ -28,18 +28,47 @@ struct Result: Decodable {
     let adult : Bool
     let overview : String
     let release_date : String
+    let backdrop_path : String?
+}
+
+struct Credits: Decodable {
+    let id : Int
+    let cast : [CastMember]
+    let crew : [CrewM]
+}
+
+struct CastMember: Decodable {
+    let cast_id : Int
+    let character : String
+    let credit_id : String
+    let gender : Int
+    let id : Int
+    let name : String
+    let order : Int
+}
+
+struct CrewM: Decodable {
+    let credit_id : String
+    let department : String
+    let gender : Int
+    let id : Int
+    let job : String
+    let name : String
 }
 
 protocol MovieDelegate {
-
     func movieListReceived(list: [Movie])
-    
+}
+
+protocol CrewDelegate {
+    func crewReceived(actorList: [Actor], crewMemberList: [CrewMember])
 }
 
 class JSONReader: NSObject {
     
     static var _sharedInstance: JSONReader = JSONReader()
-    var delegate : MovieDelegate?
+    var movieDelegate : MovieDelegate?
+    var crewDelegate : CrewDelegate?
     
     func decodeCurrentMovies(withData: Data) {
         var movieList = [Movie]()
@@ -48,12 +77,37 @@ class JSONReader: NSObject {
             movies.results.forEach { (m) in
                 let movie = Movie()
                 movie.Title = m.title
-                APIManager._sharedInstance.downloadImages(from: m.poster_path, with: movie)
+                APIManager._sharedInstance.downloadPoster(from: m.poster_path, with: "w154", with: movie)
+                APIManager._sharedInstance.downloadBackdrop(from: m.backdrop_path ?? m.poster_path, with: "w500", with: movie)
                 movie.Overview = m.overview
                 movie.releaseDate = m.release_date
+                movie.Id = m.id
                 movieList.append(movie)
             }
-            delegate?.movieListReceived(list: movieList)
+            movieDelegate?.movieListReceived(list: movieList)
+        } catch let jsonErr {
+            print(jsonErr)
+        }
+    }
+    
+    func decodeMovieCredits(withData: Data) {
+        var actorList = [Actor]()
+        var crewMemberList = [CrewMember]()
+        do {
+            let credits = try JSONDecoder().decode(Credits.self, from: withData)
+            credits.cast.forEach { (castMember) in
+                let actor = Actor()
+                actor.Name = castMember.name
+                actor.Character = castMember.character
+                actorList.append(actor)
+            }
+            credits.crew.forEach { (crewM) in
+                let crewMember = CrewMember()
+                crewMember.Name = crewM.name
+                crewMember.Job = crewM.job
+                crewMemberList.append(crewMember)
+            }
+            crewDelegate?.crewReceived(actorList: actorList, crewMemberList: crewMemberList)
         } catch let jsonErr {
             print(jsonErr)
         }

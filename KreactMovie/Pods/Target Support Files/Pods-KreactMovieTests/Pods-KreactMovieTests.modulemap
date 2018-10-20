@@ -1,0 +1,6 @@
+framework module Pods_KreactMovieTests {
+  umbrella header "Pods-KreactMovieTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

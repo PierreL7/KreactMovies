@@ -29,7 +29,7 @@ class MoviesTableView: UIView {
         tableView.dataSource = self
         movieList = movies
         movies.forEach { (movie) in
-            data.append(CellData.init(movieImage: movie.Image, title: movie.Title))
+            data.append(CellData.init(movieImage: movie.Poster, title: movie.Title))
         }
         self.tableView.register(MovieCustomCellTableViewCell.self, forCellReuseIdentifier: "movieCell")
         self.tableView.rowHeight = UITableView.automaticDimension   //resize cell to its content
