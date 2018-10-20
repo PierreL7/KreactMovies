@@ -13,5 +13,5 @@ class Movie: NSObject {
     var Title : String?
     var releaseDate : String?
     var Overview : String?
-    var imgPath : String?
+    var Image : UIImage?
 }

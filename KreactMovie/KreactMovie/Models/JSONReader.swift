@@ -48,7 +48,7 @@ class JSONReader: NSObject {
             movies.results.forEach { (m) in
                 let movie = Movie()
                 movie.Title = m.title
-                movie.imgPath = m.poster_path
+                APIManager._sharedInstance.downloadImages(from: m.poster_path, with: movie)
                 movie.Overview = m.overview
                 movie.releaseDate = m.release_date
                 movieList.append(movie)

@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KreactMovie/Views/MovieCustomCellTableViewCell.swift"
-            timestampString = "561688827.567129"
+            timestampString = "561729650.68864"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KreactMovie/Views/MoviesTableView.swift"
-            timestampString = "561688827.567687"
+            timestampString = "561729650.688719"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "21"
-            endingLineNumber = "21"
-            landmarkName = "createTableView()"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "createTableView(movies:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KreactMovie/Views/MoviesTableView.swift"
-            timestampString = "561688827.568135"
+            timestampString = "561729650.689139"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "KreactMovie/Views/MoviesTableView.swift"
-            timestampString = "561688827.568509"
+            timestampString = "561729650.6894341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
-            landmarkName = "createTableView()"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "createTableView(movies:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

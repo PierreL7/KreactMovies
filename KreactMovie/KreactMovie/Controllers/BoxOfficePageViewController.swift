@@ -18,6 +18,14 @@ class BoxOfficePageViewController: UIViewController {
         super.viewDidLoad()
         
         searchBarView.removeSearchBarBackground()
-        moviesTableView.createTableView()
+        moviesTableView.movieDetailsDelegate = self
+        moviesTableView.createTableView(movies: movieList)
+    }
+}
+
+//Delegates functions
+extension BoxOfficePageViewController : MovieDetails {
+    func showMovieDetails(movie: Movie) {
+        self.performSegue(withIdentifier: "ShowMovieDetails", sender: self)
     }
 }
