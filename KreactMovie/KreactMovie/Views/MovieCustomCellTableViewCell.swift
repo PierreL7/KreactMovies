@@ -30,7 +30,6 @@ class MovieCustomCellTableViewCell: UITableViewCell {
     
         self.addSubview(movieImageView)
         self.addSubview(titleView)
-        
         setViewsAnchors()
     }
     
@@ -38,7 +37,7 @@ class MovieCustomCellTableViewCell: UITableViewCell {
         movieImageView.leftAnchor.constraint(equalTo: self.leftAnchor).isActive = true
         movieImageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
         movieImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor).isActive = true
-        movieImageView.widthAnchor.constraint(equalTo: self.heightAnchor).isActive = true
+        movieImageView.widthAnchor.constraint(equalToConstant: 100).isActive = true
 
         titleView.leftAnchor.constraint(equalTo: self.movieImageView.rightAnchor).isActive = true
         titleView.rightAnchor.constraint(equalTo: self.rightAnchor).isActive = true

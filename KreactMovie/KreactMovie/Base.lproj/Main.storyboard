@@ -58,7 +58,7 @@
         <!--Box Office Page View Controller-->
         <scene sceneID="pEW-S7-Zkz">
             <objects>
-                <viewController id="bsb-Wf-bIS" customClass="BoxOfficePageViewController" customModule="KreactMovie" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalTransitionStyle="crossDissolve" id="bsb-Wf-bIS" customClass="BoxOfficePageViewController" customModule="KreactMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="k7U-ty-3l2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -121,11 +121,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="x3v-gS-si3" firstAttribute="top" secondItem="Y27-mc-5iF" secondAttribute="bottom" constant="8" id="0O4-KX-afr"/>
                             <constraint firstItem="Y27-mc-5iF" firstAttribute="top" secondItem="kHA-Ul-F4e" secondAttribute="top" id="4R3-Xp-8BO"/>
                             <constraint firstItem="kHA-Ul-F4e" firstAttribute="bottom" secondItem="x3v-gS-si3" secondAttribute="bottom" id="7ku-lD-7Ri"/>
                             <constraint firstItem="Y27-mc-5iF" firstAttribute="width" secondItem="k7U-ty-3l2" secondAttribute="width" id="ATp-KR-0Zf"/>
                             <constraint firstItem="x3v-gS-si3" firstAttribute="centerX" secondItem="kHA-Ul-F4e" secondAttribute="centerX" id="Bvo-l7-4b6"/>
-                            <constraint firstItem="x3v-gS-si3" firstAttribute="top" secondItem="kHA-Ul-F4e" secondAttribute="top" constant="88" id="LBS-09-u6f"/>
                             <constraint firstItem="Y27-mc-5iF" firstAttribute="height" secondItem="k7U-ty-3l2" secondAttribute="height" multiplier="0.12" id="ilS-mt-QFW"/>
                             <constraint firstItem="Y27-mc-5iF" firstAttribute="centerX" secondItem="kHA-Ul-F4e" secondAttribute="centerX" id="xQ9-8f-XpL"/>
                             <constraint firstItem="x3v-gS-si3" firstAttribute="width" secondItem="k7U-ty-3l2" secondAttribute="width" id="ytA-7d-iZZ"/>
