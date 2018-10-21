@@ -35,6 +35,16 @@ class MoviesTableView: UIView {
         self.tableView.rowHeight = UITableView.automaticDimension   //resize cell to its content
     }
     
+    func reloadTableView(movies : [Movie]) {
+        data.removeAll()
+        movieList = movies
+        movies.forEach { (movie) in
+            data.append(CellData.init(movieImage: movie.Poster, title: movie.Title))
+        }
+        self.tableView.register(MovieCustomCellTableViewCell.self, forCellReuseIdentifier: "movieCell")
+        self.tableView.reloadData()
+    }
+    
     func findMovieByName(name: String) -> Movie? {
         // Seeking for the first occurence of the title
         if let movie = movieList.first(where: {$0.Title == name}) {

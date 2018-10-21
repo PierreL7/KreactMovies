@@ -45,6 +45,7 @@ struct CastMember: Decodable {
     let id : Int
     let name : String
     let order : Int
+    let profile_path : String?
 }
 
 struct CrewM: Decodable {
@@ -54,6 +55,7 @@ struct CrewM: Decodable {
     let id : Int
     let job : String
     let name : String
+    let profile_path : String?
 }
 
 struct Trailer: Decodable {
@@ -117,12 +119,14 @@ class JSONReader: NSObject {
                 let actor = Actor()
                 actor.Name = castMember.name
                 actor.Character = castMember.character
+                actor.picturePath = castMember.profile_path
                 actorList.append(actor)
             }
             credits.crew.forEach { (crewM) in
                 let crewMember = CrewMember()
                 crewMember.Name = crewM.name
                 crewMember.Job = crewM.job
+                crewMember.picturePath = crewM.profile_path
                 crewMemberList.append(crewMember)
             }
             crewDelegate?.crewReceived(actorList: actorList, crewMemberList: crewMemberList)

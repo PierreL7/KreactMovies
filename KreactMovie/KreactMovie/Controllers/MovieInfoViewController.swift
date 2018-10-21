@@ -13,6 +13,7 @@ class MovieInfoViewController: UIViewController {
     @IBOutlet weak var mainInfo : MovieMainInfoView!
     @IBOutlet weak var trailerView : TrailerView!
     @IBOutlet weak var synopsisView : SynopsisView!
+    @IBOutlet weak var castingView : CastingCollectionView!
 
     var movie : Movie!
     var actors : [Actor]!
@@ -24,6 +25,7 @@ class MovieInfoViewController: UIViewController {
         JSONReader._sharedInstance.crewDelegate = self
         JSONReader._sharedInstance.trailerDelegate = self
         
+        
         if let movieId = movie.Id {
             APIManager._sharedInstance.getMovieCreditsByID(id: movieId)
             APIManager._sharedInstance.getTrailerByMovieId(id: movieId)
@@ -32,7 +34,6 @@ class MovieInfoViewController: UIViewController {
             synopsisView.setSynopsis(synopsis: synopsis)
         }
         mainInfo.mainInfo(movie: movie)
-        
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.handleGesture(gesture:)))
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
@@ -51,6 +52,10 @@ class MovieInfoViewController: UIViewController {
             return nil
         }
     }
+    
+    @IBAction func backToBoxOffice(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 //Delegates Functions
@@ -64,6 +69,7 @@ extension MovieInfoViewController: CrewDelegate, TrailerDelegate {
         crewMembers = crewMemberList
         DispatchQueue.main.async {
             self.mainInfo.From.text = self.findCrewMemberByJob(job: "Director")
+            self.castingView.createCastingView(_actors: self.actors)
         }
     }
 }

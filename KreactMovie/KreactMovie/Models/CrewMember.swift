@@ -12,4 +12,5 @@ class CrewMember: NSObject {
 
     var Name : String?
     var Job : String?
+    var picturePath : String?
 }

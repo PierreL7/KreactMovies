@@ -84,4 +84,16 @@ class APIManager: NSObject {
             movie.Backdrop = UIImage(data: data)
         }
     }
+    
+    func downloadPicture(from path : String, with width : String, with actor : Actor) {
+        if path == "unknown" {
+            actor.Picture = UIImage(named: path)
+            return
+        }
+        guard let url = URL(string: "\(imageUrl)/\(width)/\(path)") else {return}
+        getData(from: url) { data, response, error in
+            guard let data = data, error == nil else { return }
+            actor.Picture = UIImage(data: data)
+        }
+    }
 }

@@ -12,5 +12,6 @@ class Actor: NSObject {
     
     var Character : String?
     var Name : String?
+    var picturePath : String?
     var Picture : UIImage?
 }
