@@ -19,7 +19,13 @@ class APIManager: NSObject {
     
     func getCurrentMovies() {
         
-        guard let urlToCall = URL(string: "\(theMovieDbUrl)/3/discover/movie?primary_release_date.gte=2018-10-01&primary_release_date.lte=2018-10-19&api_key=\(apiKey)") else {return}
+        let todayDate = Date()
+        let beginDate = Calendar.current.date(byAdding: .month, value: -1, to: todayDate)!
+        
+        let dateFormatterGet = DateFormatter()
+        dateFormatterGet.dateFormat = "yyyy-MM-dd"
+        
+        guard let urlToCall = URL(string: "\(theMovieDbUrl)/3/discover/movie?primary_release_date.gte=\(dateFormatterGet.string(from: beginDate))&primary_release_date.lte=\(dateFormatterGet.string(from: todayDate))&api_key=\(apiKey)") else {return}
         
         // check if url is valid
         if UIApplication.shared.canOpenURL(urlToCall) {
@@ -44,6 +50,21 @@ class APIManager: NSObject {
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let receivedData = data {
                     JSONReader._sharedInstance.decodeMovieCredits(withData: receivedData)
+                }
+            }
+            task.resume()
+        }
+    }
+    
+    func getSimilarMovies(id: Int) {
+        guard let urlToCall = URL(string: "\(theMovieDbUrl)/3/movie/\(id)/similar?api_key=\(apiKey)") else {return}
+        if UIApplication.shared.canOpenURL(urlToCall) {
+            var request = URLRequest(url: urlToCall)
+            request.httpMethod = "GET"
+            
+            let task = URLSession.shared.dataTask(with: request) { data, response, error in
+                if let receivedData = data {
+                    JSONReader._sharedInstance.decodeSimilarMovies(withData: receivedData)
                 }
             }
             task.resume()
@@ -86,7 +107,7 @@ class APIManager: NSObject {
     }
     
     func downloadPicture(from path : String, with width : String, with actor : Actor) {
-        if path == "unknown" {
+        if path == "unknown" {
             actor.Picture = UIImage(named: path)
             return
         }

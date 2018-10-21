@@ -8,6 +8,10 @@
 
 import UIKit
 
+struct SimilarMovies : Decodable {
+    let results : [Result]
+}
+
 struct Movies: Decodable {
     let page: Int
     let total_results : Int
@@ -22,7 +26,7 @@ struct Result: Decodable {
     let vote_average : Double
     let title : String
     let popularity : Double
-    let poster_path : String
+    let poster_path : String?
     let original_language : String
     let original_title : String
     let adult : Bool
@@ -88,6 +92,23 @@ class JSONReader: NSObject {
     var crewDelegate : CrewDelegate?
     var trailerDelegate : TrailerDelegate?
     
+    func decodeSimilarMovies(withData: Data) {
+        var movieList = [Movie]()
+        do {
+            let movies = try JSONDecoder().decode(SimilarMovies.self, from: withData)
+            movies.results.forEach { (m) in
+                let movie = Movie()
+                movie.Title = m.title
+                APIManager._sharedInstance.downloadPoster(from: m.poster_path ?? "unknown", with: "w154", with: movie)
+                movie.voteAverage = m.vote_average
+                movieList.append(movie)
+            }
+            movieDelegate?.movieListReceived(list: movieList)
+        } catch let jsonErr {
+            print(jsonErr)
+        }
+    }
+    
     func decodeCurrentMovies(withData: Data) {
         var movieList = [Movie]()
         do {
@@ -95,8 +116,9 @@ class JSONReader: NSObject {
             movies.results.forEach { (m) in
                 let movie = Movie()
                 movie.Title = m.title
-                APIManager._sharedInstance.downloadPoster(from: m.poster_path, with: "w154", with: movie)
-                APIManager._sharedInstance.downloadBackdrop(from: m.backdrop_path ?? m.poster_path, with: "w500", with: movie)
+                guard let poster = m.poster_path else {return}
+                APIManager._sharedInstance.downloadPoster(from: poster, with: "w154", with: movie)
+                APIManager._sharedInstance.downloadBackdrop(from: m.backdrop_path ?? poster, with: "w500", with: movie)
                 movie.Overview = m.overview
                 movie.releaseDate = m.release_date
                 movie.Id = m.id

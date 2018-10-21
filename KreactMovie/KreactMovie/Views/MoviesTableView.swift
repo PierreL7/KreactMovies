@@ -33,6 +33,7 @@ class MoviesTableView: UIView {
         }
         self.tableView.register(MovieCustomCellTableViewCell.self, forCellReuseIdentifier: "movieCell")
         self.tableView.rowHeight = UITableView.automaticDimension   //resize cell to its content
+        self.tableView.addSubview(refreshControl)
     }
     
     func reloadTableView(movies : [Movie]) {
@@ -52,6 +53,21 @@ class MoviesTableView: UIView {
         } else {
             return nil
         }
+    }
+    
+    lazy var refreshControl: UIRefreshControl = {
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:
+            #selector(self.handleRefresh(_:)),
+                                 for: UIControl.Event.valueChanged)
+        refreshControl.tintColor = UIColor.red
+        
+        return refreshControl
+    }()
+    
+    @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
+        self.tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 }
 

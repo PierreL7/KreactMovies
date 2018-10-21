@@ -14,6 +14,7 @@ class MovieInfoViewController: UIViewController {
     @IBOutlet weak var trailerView : TrailerView!
     @IBOutlet weak var synopsisView : SynopsisView!
     @IBOutlet weak var castingView : CastingCollectionView!
+    @IBOutlet weak var similarMoviesView : SimilarMovieCollectionView!
 
     var movie : Movie!
     var actors : [Actor]!
@@ -24,11 +25,12 @@ class MovieInfoViewController: UIViewController {
         
         JSONReader._sharedInstance.crewDelegate = self
         JSONReader._sharedInstance.trailerDelegate = self
-        
+        JSONReader._sharedInstance.movieDelegate = self
         
         if let movieId = movie.Id {
             APIManager._sharedInstance.getMovieCreditsByID(id: movieId)
             APIManager._sharedInstance.getTrailerByMovieId(id: movieId)
+            APIManager._sharedInstance.getSimilarMovies(id: movieId)
         }
         if let synopsis = movie.Overview {
             synopsisView.setSynopsis(synopsis: synopsis)
@@ -38,6 +40,7 @@ class MovieInfoViewController: UIViewController {
         swipeRight.direction = .right
         self.view.addGestureRecognizer(swipeRight)
     }
+    
     
     @objc func handleGesture(gesture: UISwipeGestureRecognizer) -> Void {
         if gesture.direction == UISwipeGestureRecognizer.Direction.right {
@@ -59,7 +62,16 @@ class MovieInfoViewController: UIViewController {
 }
 
 //Delegates Functions
-extension MovieInfoViewController: CrewDelegate, TrailerDelegate {
+extension MovieInfoViewController: CrewDelegate, TrailerDelegate, MovieDelegate {
+    
+    func movieListReceived(list: [Movie]) {
+        DispatchQueue.main.async {
+            if !list.isEmpty {
+                self.similarMoviesView.createSimilarMovieView(_movies: list)
+            }
+        }
+    }
+    
     func trailerReceived(videoKey: String, site: String) {
         trailerView.getTrailer(videoKey: videoKey)
     }
