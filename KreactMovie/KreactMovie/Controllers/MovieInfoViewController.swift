@@ -15,6 +15,8 @@ class MovieInfoViewController: UIViewController {
     @IBOutlet weak var synopsisView : SynopsisView!
     @IBOutlet weak var castingView : CastingCollectionView!
     @IBOutlet weak var similarMoviesView : SimilarMovieCollectionView!
+    @IBOutlet weak var rateMovieView : MyRatingView!
+
 
     var movie : Movie!
     var actors : [Actor]!
@@ -35,6 +37,7 @@ class MovieInfoViewController: UIViewController {
         if let synopsis = movie.Overview {
             synopsisView.setSynopsis(synopsis: synopsis)
         }
+        rateMovieView.rateMovie(movie: movie)
         mainInfo.mainInfo(movie: movie)
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(self.handleGesture(gesture:)))
         swipeRight.direction = .right

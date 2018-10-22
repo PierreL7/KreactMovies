@@ -147,14 +147,14 @@
             <objects>
                 <viewController modalTransitionStyle="flipHorizontal" id="428-r6-8i1" customClass="MovieInfoViewController" customModule="KreactMovie" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kB2-Et-vS8">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1550"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nfk-im-UQT">
-                                <rect key="frame" x="0.0" y="132" width="375" height="1268"/>
+                                <rect key="frame" x="0.0" y="144" width="375" height="1406"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S9y-f3-tLr" userLabel="DetailMovieView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1268"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1398"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LhJ-yW-SvW" customClass="MovieMainInfoView" customModule="KreactMovie" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="384.5"/>
@@ -286,7 +286,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCN-9c-M4F" customClass="TrailerView" customModule="KreactMovie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="538.5" width="375" height="192.5"/>
+                                                <rect key="frame" x="0.0" y="620.5" width="375" height="192.5"/>
                                                 <subviews>
                                                     <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fMl-b7-A0r">
                                                         <rect key="frame" x="0.0" y="0.0" width="375" height="192.5"/>
@@ -318,7 +318,7 @@
                                                 </connections>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRX-bN-5sS" customClass="SynopsisView" customModule="KreactMovie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="384" width="375" height="144.5"/>
+                                                <rect key="frame" x="0.0" y="466" width="375" height="144.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Synopsis" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1i-Ok-abr">
                                                         <rect key="frame" x="164" y="0.0" width="47" height="21"/>
@@ -348,7 +348,7 @@
                                                 </connections>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T1i-Ro-m4O" userLabel="SimilarMovies View" customClass="SimilarMovieCollectionView" customModule="KreactMovie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1041" width="375" height="192.5"/>
+                                                <rect key="frame" x="0.0" y="1164" width="375" height="223.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zpp-3S-lrf">
                                                     <size key="itemSize" width="159" height="198"/>
@@ -358,7 +358,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SimilarMovieCell" id="dqg-Ay-NAJ" customClass="SimilarMovieCollectionViewCell" customModule="KreactMovie" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-3" width="159" height="198"/>
+                                                        <rect key="frame" x="0.0" y="13" width="159" height="198"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="159" height="198"/>
@@ -401,7 +401,7 @@
                                                 </cells>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-R5-ILV" customClass="CastingCollectionView" customModule="KreactMovie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="791" width="375" height="192"/>
+                                                <rect key="frame" x="0.0" y="883" width="375" height="223"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8dK-LW-I8s">
                                                     <size key="itemSize" width="159" height="198"/>
@@ -411,7 +411,7 @@
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CastingCell" id="fUm-v6-kkJ" customClass="CastingCollectionViewCell" customModule="KreactMovie" customModuleProvider="target">
-                                                        <rect key="frame" x="0.0" y="-3" width="159" height="198"/>
+                                                        <rect key="frame" x="0.0" y="12.5" width="159" height="198"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
                                                             <rect key="frame" x="0.0" y="0.0" width="159" height="198"/>
@@ -453,7 +453,7 @@
                                                 </cells>
                                             </collectionView>
                                             <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKK-wB-8ZX">
-                                                <rect key="frame" x="0.0" y="741" width="375" height="38"/>
+                                                <rect key="frame" x="0.0" y="833" width="375" height="38"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1M-b4-jGp">
                                                         <rect key="frame" x="167.5" y="8.5" width="40" height="21"/>
@@ -469,7 +469,7 @@
                                                 </constraints>
                                             </view>
                                             <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYL-CI-UzP">
-                                                <rect key="frame" x="0.0" y="993" width="375" height="38"/>
+                                                <rect key="frame" x="0.0" y="1116" width="375" height="38"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-Sp-U0i">
                                                         <rect key="frame" x="148" y="8.5" width="79" height="21"/>
@@ -484,15 +484,55 @@
                                                     <constraint firstItem="EZT-Sp-U0i" firstAttribute="centerX" secondItem="lYL-CI-UzP" secondAttribute="centerX" id="Uww-bQ-DrC"/>
                                                 </constraints>
                                             </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5rc-GR-8gB" customClass="MyRatingView" customModule="KreactMovie" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="384" width="375" height="70"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Rating" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-I2-aIS">
+                                                        <rect key="frame" x="160.5" y="0.0" width="54" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5yu-ub-ape" customClass="CosmosView" customModule="Cosmos">
+                                                        <rect key="frame" x="102.5" y="29" width="170" height="30"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="filledColor">
+                                                                <color key="value" red="0.92156862745098034" green="0.74901960784313726" blue="0.18431372549019609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="emptyBorderColor">
+                                                                <color key="value" red="0.91764705882352937" green="0.74509803921568629" blue="0.25098039215686274" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="filledBorderColor">
+                                                                <color key="value" red="0.92156862750000001" green="0.74901960779999999" blue="0.1843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="starSize">
+                                                                <real key="value" value="30"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="5yu-ub-ape" firstAttribute="top" secondItem="5rc-GR-8gB" secondAttribute="top" constant="29" id="HHF-vb-rfD"/>
+                                                    <constraint firstItem="vdc-I2-aIS" firstAttribute="centerX" secondItem="5rc-GR-8gB" secondAttribute="centerX" id="V58-bi-CR0"/>
+                                                    <constraint firstItem="vdc-I2-aIS" firstAttribute="top" secondItem="5rc-GR-8gB" secondAttribute="top" id="nmN-tN-eGI"/>
+                                                    <constraint firstItem="5yu-ub-ape" firstAttribute="centerX" secondItem="vdc-I2-aIS" secondAttribute="centerX" id="otR-rM-cc6"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outlet property="rateMovieView" destination="5yu-ub-ape" id="nsX-oO-YuN"/>
+                                                </connections>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="GCN-9c-M4F" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-61.100000000000023" id="1hM-Vq-hab"/>
+                                            <constraint firstItem="GCN-9c-M4F" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-87.100000000000023" id="1hM-Vq-hab"/>
                                             <constraint firstItem="GCN-9c-M4F" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="5jx-aA-IXF"/>
                                             <constraint firstItem="T1i-Ro-m4O" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="7QX-5o-6vD"/>
-                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="top" secondItem="fMl-b7-A0r" secondAttribute="bottom" constant="10" id="89I-51-HUj"/>
+                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="top" secondItem="fMl-b7-A0r" secondAttribute="bottom" constant="20" id="89I-51-HUj"/>
                                             <constraint firstItem="T1i-Ro-m4O" firstAttribute="top" secondItem="lYL-CI-UzP" secondAttribute="bottom" constant="10" id="9K2-u7-Eaw"/>
-                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.03" id="Dzd-6N-VCP"/>
+                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.03" constant="-3.9399999999999977" id="Dzd-6N-VCP"/>
+                                            <constraint firstItem="5rc-GR-8gB" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.05" id="E5b-01-6o7"/>
                                             <constraint firstItem="lYL-CI-UzP" firstAttribute="width" secondItem="aKK-wB-8ZX" secondAttribute="width" id="G2C-0a-kwZ"/>
                                             <constraint firstItem="lYL-CI-UzP" firstAttribute="top" secondItem="WYI-R5-ILV" secondAttribute="bottom" constant="10" id="HSV-f2-kgl"/>
                                             <constraint firstItem="lYL-CI-UzP" firstAttribute="centerX" secondItem="WYI-R5-ILV" secondAttribute="centerX" id="JlW-Ko-lbX"/>
@@ -502,65 +542,67 @@
                                             <constraint firstItem="GCN-9c-M4F" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="QIY-mJ-oZw"/>
                                             <constraint firstItem="WYI-R5-ILV" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="Qqc-b5-HBy"/>
                                             <constraint firstAttribute="trailing" secondItem="LhJ-yW-SvW" secondAttribute="trailing" id="Scr-HQ-z7p"/>
+                                            <constraint firstItem="5rc-GR-8gB" firstAttribute="top" secondItem="LhJ-yW-SvW" secondAttribute="bottom" constant="-0.5" id="Ugi-DP-dFg"/>
                                             <constraint firstItem="LhJ-yW-SvW" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="VGC-Xy-DQf"/>
                                             <constraint firstItem="fMl-b7-A0r" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="Xaj-hc-QGk"/>
-                                            <constraint firstAttribute="bottom" secondItem="LhJ-yW-SvW" secondAttribute="bottom" constant="883.5" id="ZaJ-go-gU1"/>
+                                            <constraint firstAttribute="bottom" secondItem="LhJ-yW-SvW" secondAttribute="bottom" constant="1013.5" id="ZaJ-go-gU1"/>
                                             <constraint firstItem="WYI-R5-ILV" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="a0p-q3-bfq"/>
                                             <constraint firstItem="T1i-Ro-m4O" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="b7u-qv-IJr"/>
-                                            <constraint firstItem="LhJ-yW-SvW" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.4" constant="-122.70000000000005" id="emH-eE-F2M"/>
+                                            <constraint firstItem="LhJ-yW-SvW" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.4" constant="-174.70000000000005" id="emH-eE-F2M"/>
+                                            <constraint firstItem="dRX-bN-5sS" firstAttribute="top" secondItem="5rc-GR-8gB" secondAttribute="bottom" constant="12" id="euX-F5-WTy"/>
                                             <constraint firstItem="LhJ-yW-SvW" firstAttribute="top" secondItem="S9y-f3-tLr" secondAttribute="top" id="geF-0p-Jg7"/>
                                             <constraint firstItem="aKK-wB-8ZX" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="jjv-4w-QGA"/>
                                             <constraint firstItem="dRX-bN-5sS" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="jzd-Sw-GKU"/>
                                             <constraint firstItem="dRX-bN-5sS" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="m9b-wn-m2m"/>
-                                            <constraint firstItem="T1i-Ro-m4O" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-61" id="qw7-9V-Nt2"/>
+                                            <constraint firstItem="5rc-GR-8gB" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="nNe-d7-hM3"/>
+                                            <constraint firstItem="T1i-Ro-m4O" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.22" constant="-84.060000000000002" id="qw7-9V-Nt2"/>
                                             <constraint firstItem="LhJ-yW-SvW" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="u3u-Ee-MPi"/>
-                                            <constraint firstItem="dRX-bN-5sS" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.15" constant="-45.699999999999989" id="vs5-KN-8lZ"/>
-                                            <constraint firstItem="WYI-R5-ILV" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-61.600000000000023" id="w1s-iG-UB1"/>
-                                            <constraint firstItem="dRX-bN-5sS" firstAttribute="top" secondItem="LhJ-yW-SvW" secondAttribute="bottom" constant="-0.5" id="wMA-BS-nnY"/>
+                                            <constraint firstItem="dRX-bN-5sS" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.15" constant="-65.199999999999989" id="vs5-KN-8lZ"/>
+                                            <constraint firstItem="WYI-R5-ILV" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.22" constant="-84.560000000000002" id="w1s-iG-UB1"/>
                                             <constraint firstItem="lYL-CI-UzP" firstAttribute="height" secondItem="aKK-wB-8ZX" secondAttribute="height" id="y3o-5O-t1U"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="S9y-f3-tLr" firstAttribute="height" secondItem="Nfk-im-UQT" secondAttribute="height" priority="250" id="Ilt-S2-UXw"/>
+                                    <constraint firstItem="5rc-GR-8gB" firstAttribute="centerX" secondItem="Nfk-im-UQT" secondAttribute="centerX" id="3gV-7K-DQD"/>
                                     <constraint firstItem="S9y-f3-tLr" firstAttribute="top" secondItem="Nfk-im-UQT" secondAttribute="top" id="Kpn-9Q-DSD"/>
                                     <constraint firstItem="S9y-f3-tLr" firstAttribute="width" secondItem="Nfk-im-UQT" secondAttribute="width" id="fUm-yV-Z8n"/>
                                     <constraint firstAttribute="trailing" secondItem="S9y-f3-tLr" secondAttribute="trailing" id="lzq-Pv-79K"/>
                                     <constraint firstItem="S9y-f3-tLr" firstAttribute="leading" secondItem="Nfk-im-UQT" secondAttribute="leading" id="uc1-35-y0c"/>
-                                    <constraint firstAttribute="bottom" secondItem="S9y-f3-tLr" secondAttribute="bottom" id="xa0-HZ-iEr"/>
+                                    <constraint firstAttribute="bottom" secondItem="S9y-f3-tLr" secondAttribute="bottom" constant="8" id="xa0-HZ-iEr"/>
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L05-gr-GPk">
-                                <rect key="frame" x="0.0" y="20" width="375" height="112"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZE-9O-PCS">
-                                        <rect key="frame" x="219.5" y="45" width="112.5" height="22"/>
+                                        <rect key="frame" x="238.5" y="49.5" width="112.5" height="25"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Jk-T1-LRi">
-                                        <rect key="frame" x="17" y="31" width="71.5" height="50"/>
+                                        <rect key="frame" x="17" y="37" width="79" height="50"/>
                                         <state key="normal" image="backButton"/>
                                         <connections>
                                             <action selector="backToBoxOffice:" destination="428-r6-8i1" eventType="touchUpInside" id="KA3-es-KcA"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kreactMovieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="PQ4-Js-HdQ">
-                                        <rect key="frame" x="106.5" y="0.0" width="105" height="112"/>
+                                        <rect key="frame" x="114" y="0.0" width="116.5" height="124"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="PQ4-Js-HdQ" secondAttribute="bottom" id="0Sl-Ap-HFw"/>
                                     <constraint firstItem="PQ4-Js-HdQ" firstAttribute="top" secondItem="L05-gr-GPk" secondAttribute="top" id="3Pz-Yw-aCs"/>
-                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JZE-9O-PCS" secondAttribute="trailing" constant="20" symbolic="YES" id="5Le-tz-3Pd"/>
                                     <constraint firstItem="8Jk-T1-LRi" firstAttribute="leading" secondItem="L05-gr-GPk" secondAttribute="leading" constant="17" id="8g2-j0-mpz"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="width" secondItem="L05-gr-GPk" secondAttribute="width" multiplier="0.3" id="9B4-Jq-nGh"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="height" secondItem="L05-gr-GPk" secondAttribute="height" multiplier="0.2" id="9gN-nY-PsL"/>
                                     <constraint firstItem="8Jk-T1-LRi" firstAttribute="width" secondItem="L05-gr-GPk" secondAttribute="height" multiplier="30:47" id="UYP-vy-l4g"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="leading" secondItem="PQ4-Js-HdQ" secondAttribute="trailing" constant="8" symbolic="YES" id="VMn-XO-zRJ"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="centerY" secondItem="L05-gr-GPk" secondAttribute="centerY" id="cVP-6N-Qsy"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="JZE-9O-PCS" secondAttribute="trailing" constant="20" symbolic="YES" id="eRH-Qk-GBy"/>
                                     <constraint firstItem="PQ4-Js-HdQ" firstAttribute="width" secondItem="L05-gr-GPk" secondAttribute="height" multiplier="15:16" id="j1u-Hf-I37"/>
                                     <constraint firstItem="8Jk-T1-LRi" firstAttribute="centerY" secondItem="L05-gr-GPk" secondAttribute="centerY" id="jVt-Tz-7JS"/>
                                     <constraint firstItem="PQ4-Js-HdQ" firstAttribute="centerY" secondItem="L05-gr-GPk" secondAttribute="centerY" id="msG-ej-eHU"/>
@@ -581,10 +623,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="75E-fw-vao"/>
                     </view>
-                    <size key="freeformSize" width="375" height="1400"/>
+                    <size key="freeformSize" width="375" height="1550"/>
                     <connections>
                         <outlet property="castingView" destination="WYI-R5-ILV" id="4El-3n-7UU"/>
                         <outlet property="mainInfo" destination="LhJ-yW-SvW" id="3GR-21-Cyf"/>
+                        <outlet property="rateMovieView" destination="5rc-GR-8gB" id="waJ-R5-Mjf"/>
                         <outlet property="similarMoviesView" destination="T1i-Ro-m4O" id="zQo-dY-aiI"/>
                         <outlet property="synopsisView" destination="dRX-bN-5sS" id="TZ4-hN-gkF"/>
                         <outlet property="trailerView" destination="GCN-9c-M4F" id="Alm-Oh-tdF"/>

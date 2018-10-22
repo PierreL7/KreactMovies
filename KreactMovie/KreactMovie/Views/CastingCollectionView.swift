@@ -35,4 +35,5 @@ class CastingCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         cell.layoutSubviews()
         return cell
     }
+
 }

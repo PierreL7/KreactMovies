@@ -18,4 +18,5 @@ class Movie: NSObject {
     var Popularity : Double?
     var voteAverage : Double?
     var Id : Int?
+    var movieRating: Double?
 }

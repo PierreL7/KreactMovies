@@ -34,6 +34,7 @@ class SimilarMovieCollectionView: UICollectionView,UICollectionViewDelegate, UIC
         } else {
             cell.Rating.rating = 0.0
         }
+        cell.Rating.settings.updateOnTouch = false
         cell.layoutSubviews()
 
         return cell

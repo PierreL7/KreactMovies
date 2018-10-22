@@ -18,6 +18,7 @@
 		7F9E6ED3217BA75F0069B24A /* SynopsisView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E6ED2217BA75F0069B24A /* SynopsisView.swift */; };
 		7F9E6ED7217BE47A0069B24A /* CastingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E6ED6217BE47A0069B24A /* CastingCollectionViewCell.swift */; };
 		7F9E6EDB217BE63A0069B24A /* CastingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E6EDA217BE63A0069B24A /* CastingCollectionView.swift */; };
+		7FB145F5217E879A0088B8AA /* MyRatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB145F4217E879A0088B8AA /* MyRatingView.swift */; };
 		7FB5D3852179EF5B00477E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3842179EF5B00477E6D /* AppDelegate.swift */; };
 		7FB5D3872179EF5B00477E6D /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3862179EF5B00477E6D /* LoadingViewController.swift */; };
 		7FB5D38A2179EF5B00477E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5D3882179EF5B00477E6D /* Main.storyboard */; };
@@ -66,6 +67,7 @@
 		7F9E6ED2217BA75F0069B24A /* SynopsisView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynopsisView.swift; sourceTree = "<group>"; };
 		7F9E6ED6217BE47A0069B24A /* CastingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingCollectionViewCell.swift; sourceTree = "<group>"; };
 		7F9E6EDA217BE63A0069B24A /* CastingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingCollectionView.swift; sourceTree = "<group>"; };
+		7FB145F4217E879A0088B8AA /* MyRatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRatingView.swift; sourceTree = "<group>"; };
 		7FB5D3812179EF5A00477E6D /* KreactMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreactMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB5D3842179EF5B00477E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7FB5D3862179EF5B00477E6D /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 				7F9E6EDA217BE63A0069B24A /* CastingCollectionView.swift */,
 				7F01AA41217D2D5E00AEA9E3 /* SimilarMovieCollectionView.swift */,
 				7F01AA43217D303B00AEA9E3 /* SimilarMovieCollectionViewCell.swift */,
+				7FB145F4217E879A0088B8AA /* MyRatingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				7FB5D3872179EF5B00477E6D /* LoadingViewController.swift in Sources */,
 				7FB5D3C6217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift in Sources */,
 				7FB5D3C2217A270400477E6D /* SearchBarView.swift in Sources */,
+				7FB145F5217E879A0088B8AA /* MyRatingView.swift in Sources */,
 				7FB5D3852179EF5B00477E6D /* AppDelegate.swift in Sources */,
 				7F01AA44217D303B00AEA9E3 /* SimilarMovieCollectionViewCell.swift in Sources */,
 				7FB5D38D2179EF5B00477E6D /* KreactMovie.xcdatamodeld in Sources */,
