@@ -76,7 +76,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <searchBar contentMode="redraw" placeholder="Search..." translatesAutoresizingMaskIntoConstraints="NO" id="shP-uW-dqg">
-                                        <rect key="frame" x="178" y="12" width="150" height="56"/>
+                                        <rect key="frame" x="178" y="12" width="187.5" height="56"/>
                                         <color key="barTintColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </searchBar>
@@ -85,13 +85,13 @@
                                 <constraints>
                                     <constraint firstItem="NMA-L1-8tH" firstAttribute="width" secondItem="Y27-mc-5iF" secondAttribute="height" multiplier="15:16" id="3e6-Bk-z8f"/>
                                     <constraint firstItem="NMA-L1-8tH" firstAttribute="centerY" secondItem="Y27-mc-5iF" secondAttribute="centerY" id="Jzc-9i-TGW"/>
-                                    <constraint firstItem="shP-uW-dqg" firstAttribute="leading" secondItem="aim-mW-ChU" secondAttribute="trailing" constant="12.5" id="MY6-Wc-pUv"/>
                                     <constraint firstItem="aim-mW-ChU" firstAttribute="width" secondItem="Y27-mc-5iF" secondAttribute="width" multiplier="0.22" id="QE1-xd-ZCp"/>
+                                    <constraint firstItem="shP-uW-dqg" firstAttribute="leading" secondItem="aim-mW-ChU" secondAttribute="trailing" constant="12.5" id="W5R-W1-Hcc"/>
                                     <constraint firstItem="aim-mW-ChU" firstAttribute="leading" secondItem="NMA-L1-8tH" secondAttribute="trailing" constant="8" id="Xsf-Sk-QZ7"/>
                                     <constraint firstItem="NMA-L1-8tH" firstAttribute="leading" secondItem="Y27-mc-5iF" secondAttribute="leading" id="ZvR-Tc-LvU"/>
                                     <constraint firstItem="aim-mW-ChU" firstAttribute="height" secondItem="Y27-mc-5iF" secondAttribute="height" multiplier="0.2" id="alm-gk-y9L"/>
-                                    <constraint firstItem="shP-uW-dqg" firstAttribute="width" secondItem="Y27-mc-5iF" secondAttribute="width" multiplier="0.4" id="cXt-F1-C9p"/>
                                     <constraint firstItem="aim-mW-ChU" firstAttribute="centerY" secondItem="Y27-mc-5iF" secondAttribute="centerY" id="cq8-Jt-O8r"/>
+                                    <constraint firstAttribute="trailing" secondItem="shP-uW-dqg" secondAttribute="trailing" constant="9.5" id="flO-uC-pLt"/>
                                     <constraint firstAttribute="bottom" secondItem="NMA-L1-8tH" secondAttribute="bottom" id="m55-jg-ZZ6"/>
                                     <constraint firstItem="shP-uW-dqg" firstAttribute="centerY" secondItem="aim-mW-ChU" secondAttribute="centerY" id="zzF-q2-S64"/>
                                 </constraints>
@@ -343,7 +343,7 @@
                                                 </connections>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="T1i-Ro-m4O" userLabel="SimilarMovies View" customClass="SimilarMovieCollectionView" customModule="KreactMovie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="1000" width="375" height="192.5"/>
+                                                <rect key="frame" x="0.0" y="1041" width="375" height="192.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="zpp-3S-lrf">
                                                     <size key="itemSize" width="159" height="198"/>
@@ -362,11 +362,11 @@
                                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kreactMovieLogo" translatesAutoresizingMaskIntoConstraints="NO" id="PiO-wg-EZX">
                                                                     <rect key="frame" x="0.0" y="0.0" width="159" height="134"/>
                                                                 </imageView>
-                                                                <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zR6-ZD-7R9" customClass="CosmosView" customModule="Cosmos">
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zR6-ZD-7R9" customClass="CosmosView" customModule="Cosmos">
                                                                     <rect key="frame" x="24" y="162" width="111" height="20"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Lord of the Ring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yww-93-m9G">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lord of the Ring" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yww-93-m9G">
                                                                     <rect key="frame" x="41.5" y="140" width="76" height="19"/>
                                                                     <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="15"/>
                                                                     <nil key="textColor"/>
@@ -375,6 +375,7 @@
                                                             </subviews>
                                                         </view>
                                                         <constraints>
+                                                            <constraint firstItem="Yww-93-m9G" firstAttribute="centerX" secondItem="PiO-wg-EZX" secondAttribute="centerX" id="09I-5U-BCS"/>
                                                             <constraint firstItem="PiO-wg-EZX" firstAttribute="top" secondItem="dqg-Ay-NAJ" secondAttribute="top" id="71g-hL-xrc"/>
                                                             <constraint firstItem="zR6-ZD-7R9" firstAttribute="centerX" secondItem="dqg-Ay-NAJ" secondAttribute="centerX" id="LBh-mi-Wpm"/>
                                                             <constraint firstAttribute="bottom" secondItem="zR6-ZD-7R9" secondAttribute="bottom" constant="16" id="Xah-k3-suN"/>
@@ -394,7 +395,7 @@
                                                 </cells>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="WYI-R5-ILV" customClass="CastingCollectionView" customModule="KreactMovie" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="739" width="375" height="192"/>
+                                                <rect key="frame" x="0.0" y="791" width="375" height="192"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8dK-LW-I8s">
                                                     <size key="itemSize" width="159" height="198"/>
@@ -445,20 +446,53 @@
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar Movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jed-AJ-b9C">
-                                                <rect key="frame" x="148" y="957" width="79" height="21"/>
-                                                <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
+                                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aKK-wB-8ZX">
+                                                <rect key="frame" x="0.0" y="741" width="375" height="38"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Casting" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w1M-b4-jGp">
+                                                        <rect key="frame" x="167.5" y="8.5" width="40" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="w1M-b4-jGp" firstAttribute="centerY" secondItem="aKK-wB-8ZX" secondAttribute="centerY" id="a0I-XB-rGC"/>
+                                                    <constraint firstItem="w1M-b4-jGp" firstAttribute="centerX" secondItem="aKK-wB-8ZX" secondAttribute="centerX" id="koV-Ah-1kH"/>
+                                                </constraints>
+                                            </view>
+                                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lYL-CI-UzP">
+                                                <rect key="frame" x="0.0" y="993" width="375" height="38"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Similar movies" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZT-Sp-U0i">
+                                                        <rect key="frame" x="148" y="8.5" width="79" height="21"/>
+                                                        <fontDescription key="fontDescription" name="Futura-CondensedMedium" family="Futura" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="0.41176470590000003" green="0.6588235294" blue="0.30980392159999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstItem="EZT-Sp-U0i" firstAttribute="centerY" secondItem="lYL-CI-UzP" secondAttribute="centerY" id="R5A-mQ-rX1"/>
+                                                    <constraint firstItem="EZT-Sp-U0i" firstAttribute="centerX" secondItem="lYL-CI-UzP" secondAttribute="centerX" id="Uww-bQ-DrC"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="GCN-9c-M4F" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-61.100000000000023" id="1hM-Vq-hab"/>
                                             <constraint firstItem="GCN-9c-M4F" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="5jx-aA-IXF"/>
                                             <constraint firstItem="T1i-Ro-m4O" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="7QX-5o-6vD"/>
-                                            <constraint firstItem="T1i-Ro-m4O" firstAttribute="top" secondItem="Jed-AJ-b9C" secondAttribute="bottom" constant="22" id="FIm-gu-rfl"/>
+                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="top" secondItem="fMl-b7-A0r" secondAttribute="bottom" constant="10" id="89I-51-HUj"/>
+                                            <constraint firstItem="T1i-Ro-m4O" firstAttribute="top" secondItem="lYL-CI-UzP" secondAttribute="bottom" constant="10" id="9K2-u7-Eaw"/>
+                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.03" id="Dzd-6N-VCP"/>
+                                            <constraint firstItem="lYL-CI-UzP" firstAttribute="width" secondItem="aKK-wB-8ZX" secondAttribute="width" id="G2C-0a-kwZ"/>
+                                            <constraint firstItem="lYL-CI-UzP" firstAttribute="top" secondItem="WYI-R5-ILV" secondAttribute="bottom" constant="10" id="HSV-f2-kgl"/>
+                                            <constraint firstItem="lYL-CI-UzP" firstAttribute="centerX" secondItem="WYI-R5-ILV" secondAttribute="centerX" id="JlW-Ko-lbX"/>
                                             <constraint firstItem="fMl-b7-A0r" firstAttribute="top" secondItem="dRX-bN-5sS" secondAttribute="bottom" constant="10" id="L3J-O8-yy5"/>
+                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="Nxn-62-Uqx"/>
+                                            <constraint firstItem="WYI-R5-ILV" firstAttribute="top" secondItem="aKK-wB-8ZX" secondAttribute="bottom" constant="12" id="OS2-QB-FX3"/>
                                             <constraint firstItem="GCN-9c-M4F" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="QIY-mJ-oZw"/>
                                             <constraint firstItem="WYI-R5-ILV" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="Qqc-b5-HBy"/>
                                             <constraint firstAttribute="trailing" secondItem="LhJ-yW-SvW" secondAttribute="trailing" id="Scr-HQ-z7p"/>
@@ -469,16 +503,15 @@
                                             <constraint firstItem="T1i-Ro-m4O" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="b7u-qv-IJr"/>
                                             <constraint firstItem="LhJ-yW-SvW" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.4" constant="-122.70000000000005" id="emH-eE-F2M"/>
                                             <constraint firstItem="LhJ-yW-SvW" firstAttribute="top" secondItem="S9y-f3-tLr" secondAttribute="top" id="geF-0p-Jg7"/>
+                                            <constraint firstItem="aKK-wB-8ZX" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="jjv-4w-QGA"/>
                                             <constraint firstItem="dRX-bN-5sS" firstAttribute="width" secondItem="S9y-f3-tLr" secondAttribute="width" id="jzd-Sw-GKU"/>
                                             <constraint firstItem="dRX-bN-5sS" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="m9b-wn-m2m"/>
-                                            <constraint firstItem="Jed-AJ-b9C" firstAttribute="top" secondItem="WYI-R5-ILV" secondAttribute="bottom" constant="26" id="mvZ-69-95X"/>
-                                            <constraint firstItem="WYI-R5-ILV" firstAttribute="top" secondItem="GCN-9c-M4F" secondAttribute="bottom" constant="8" id="qHX-DW-X1K"/>
                                             <constraint firstItem="T1i-Ro-m4O" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-61" id="qw7-9V-Nt2"/>
-                                            <constraint firstItem="Jed-AJ-b9C" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="sl4-ZM-ju5"/>
                                             <constraint firstItem="LhJ-yW-SvW" firstAttribute="centerX" secondItem="S9y-f3-tLr" secondAttribute="centerX" id="u3u-Ee-MPi"/>
                                             <constraint firstItem="dRX-bN-5sS" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.15" constant="-45.699999999999989" id="vs5-KN-8lZ"/>
                                             <constraint firstItem="WYI-R5-ILV" firstAttribute="height" secondItem="S9y-f3-tLr" secondAttribute="height" multiplier="0.2" constant="-61.600000000000023" id="w1s-iG-UB1"/>
                                             <constraint firstItem="dRX-bN-5sS" firstAttribute="top" secondItem="LhJ-yW-SvW" secondAttribute="bottom" constant="-0.5" id="wMA-BS-nnY"/>
+                                            <constraint firstItem="lYL-CI-UzP" firstAttribute="height" secondItem="aKK-wB-8ZX" secondAttribute="height" id="y3o-5O-t1U"/>
                                         </constraints>
                                     </view>
                                 </subviews>

@@ -11,6 +11,7 @@ import UIKit
 struct CellData {
     let movieImage : UIImage?
     let title : String?
+    let movieLogo : UIImage?
 }
 
 protocol MovieDetails {
@@ -29,7 +30,7 @@ class MoviesTableView: UIView {
         tableView.dataSource = self
         movieList = movies
         movies.forEach { (movie) in
-            data.append(CellData.init(movieImage: movie.Poster, title: movie.Title))
+            data.append(CellData.init(movieImage: movie.Poster, title: movie.Title, movieLogo: UIImage(named: "moveRight")))
         }
         self.tableView.register(MovieCustomCellTableViewCell.self, forCellReuseIdentifier: "movieCell")
         self.tableView.rowHeight = UITableView.automaticDimension   //resize cell to its content
@@ -40,7 +41,7 @@ class MoviesTableView: UIView {
         data.removeAll()
         movieList = movies
         movies.forEach { (movie) in
-            data.append(CellData.init(movieImage: movie.Poster, title: movie.Title))
+            data.append(CellData.init(movieImage: movie.Poster, title: movie.Title, movieLogo: UIImage(named: "moveRight")))
         }
         self.tableView.register(MovieCustomCellTableViewCell.self, forCellReuseIdentifier: "movieCell")
         self.tableView.reloadData()
@@ -87,6 +88,7 @@ extension MoviesTableView : UITableViewDelegate, UITableViewDataSource {
         
         cell.movieImage = data[indexPath.row].movieImage
         cell.title = data[indexPath.row].title
+        cell.movieLogo = data[indexPath.row].movieLogo
         if indexPath.row % 2 != 0 {
             cell.backgroundColor = UIColor(red: 105, green: 168, blue: 79).withAlphaComponent(0.5)
         } else {

@@ -50,7 +50,6 @@ extension BoxOfficePageViewController : MovieDetails, UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         movieResearch = movieList.filter({ movie -> Bool in
             guard let title = movie.Title else {return false}
-            print(title.contains(searchText))
             return title.contains(searchText)
         })
         if movieResearch.isEmpty {
