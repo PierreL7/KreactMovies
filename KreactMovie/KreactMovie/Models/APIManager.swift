@@ -34,7 +34,9 @@ class APIManager: NSObject {
                 
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let receivedData = data {
-                    JSONReader._sharedInstance.decodeCurrentMovies(withData: receivedData)
+                    if !JSONReader._sharedInstance.decodeCurrentMovies(withData: receivedData) {
+                        return
+                    }
                 }
             }
             task.resume()
@@ -49,7 +51,9 @@ class APIManager: NSObject {
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let receivedData = data {
-                    JSONReader._sharedInstance.decodeMovieCredits(withData: receivedData)
+                    if !JSONReader._sharedInstance.decodeMovieCredits(withData: receivedData) {
+                        return
+                    }
                 }
             }
             task.resume()
@@ -64,7 +68,9 @@ class APIManager: NSObject {
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let receivedData = data {
-                    JSONReader._sharedInstance.decodeSimilarMovies(withData: receivedData)
+                    if !JSONReader._sharedInstance.decodeSimilarMovies(withData: receivedData) {
+                        return
+                    }
                 }
             }
             task.resume()
@@ -79,7 +85,9 @@ class APIManager: NSObject {
             
             let task = URLSession.shared.dataTask(with: request) { data, response, error in
                 if let receivedData = data {
-                    JSONReader._sharedInstance.decodeTrailer(withData: receivedData)
+                    if !JSONReader._sharedInstance.decodeTrailer(withData: receivedData) {
+                        return
+                    }
                 }
             }
             task.resume()
@@ -91,6 +99,7 @@ class APIManager: NSObject {
     }
     
     func downloadPoster(from path : String, with width : String, with movie : Movie) {
+        movie.Poster = UIImage(named: "kreactMovieLogo")
         guard let url = URL(string: "\(imageUrl)/\(width)/\(path)") else {return}
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
@@ -107,6 +116,7 @@ class APIManager: NSObject {
     }
     
     func downloadPicture(from path : String, with width : String, with actor : Actor) {
+        actor.Picture = UIImage(named: "unknown")
         if path == "unknown" {
             actor.Picture = UIImage(named: path)
             return

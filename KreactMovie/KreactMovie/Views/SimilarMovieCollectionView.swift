@@ -34,7 +34,8 @@ class SimilarMovieCollectionView: UICollectionView,UICollectionViewDelegate, UIC
         } else {
             cell.Rating.rating = 0.0
         }
-        
+        cell.layoutSubviews()
+
         return cell
     }
 }

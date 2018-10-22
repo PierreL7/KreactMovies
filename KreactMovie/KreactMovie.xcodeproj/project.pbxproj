@@ -19,7 +19,7 @@
 		7F9E6ED7217BE47A0069B24A /* CastingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E6ED6217BE47A0069B24A /* CastingCollectionViewCell.swift */; };
 		7F9E6EDB217BE63A0069B24A /* CastingCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F9E6EDA217BE63A0069B24A /* CastingCollectionView.swift */; };
 		7FB5D3852179EF5B00477E6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3842179EF5B00477E6D /* AppDelegate.swift */; };
-		7FB5D3872179EF5B00477E6D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3862179EF5B00477E6D /* LoadingView.swift */; };
+		7FB5D3872179EF5B00477E6D /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D3862179EF5B00477E6D /* LoadingViewController.swift */; };
 		7FB5D38A2179EF5B00477E6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5D3882179EF5B00477E6D /* Main.storyboard */; };
 		7FB5D38D2179EF5B00477E6D /* KreactMovie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7FB5D38B2179EF5B00477E6D /* KreactMovie.xcdatamodeld */; };
 		7FB5D38F2179EF5C00477E6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FB5D38E2179EF5C00477E6D /* Assets.xcassets */; };
@@ -68,7 +68,7 @@
 		7F9E6EDA217BE63A0069B24A /* CastingCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CastingCollectionView.swift; sourceTree = "<group>"; };
 		7FB5D3812179EF5A00477E6D /* KreactMovie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KreactMovie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB5D3842179EF5B00477E6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7FB5D3862179EF5B00477E6D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		7FB5D3862179EF5B00477E6D /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		7FB5D3892179EF5B00477E6D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7FB5D38C2179EF5B00477E6D /* KreactMovie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = KreactMovie.xcdatamodel; sourceTree = "<group>"; };
 		7FB5D38E2179EF5C00477E6D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -197,7 +197,7 @@
 		7FB5D3B52179F45400477E6D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				7FB5D3862179EF5B00477E6D /* LoadingView.swift */,
+				7FB5D3862179EF5B00477E6D /* LoadingViewController.swift */,
 				7FB5D3BF217A18D500477E6D /* BoxOfficePageViewController.swift */,
 				7F037B7B217B6560003E8A3E /* MovieInfoViewController.swift */,
 			);
@@ -544,7 +544,7 @@
 				7F037B7E217B6D62003E8A3E /* Actor.swift in Sources */,
 				7F9E6EDB217BE63A0069B24A /* CastingCollectionView.swift in Sources */,
 				7FB5D3C4217A2BCE00477E6D /* MoviesTableView.swift in Sources */,
-				7FB5D3872179EF5B00477E6D /* LoadingView.swift in Sources */,
+				7FB5D3872179EF5B00477E6D /* LoadingViewController.swift in Sources */,
 				7FB5D3C6217A2E0C00477E6D /* MovieCustomCellTableViewCell.swift in Sources */,
 				7FB5D3C2217A270400477E6D /* SearchBarView.swift in Sources */,
 				7FB5D3852179EF5B00477E6D /* AppDelegate.swift in Sources */,

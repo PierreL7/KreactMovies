@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoadingView: UIViewController {
+class LoadingViewController: UIViewController {
 
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     private var movieList = [Movie]()
@@ -34,7 +34,7 @@ class LoadingView: UIViewController {
 }
 
 // Delegate functions
-extension LoadingView: MovieDelegate {
+extension LoadingViewController: MovieDelegate {
     
     func movieListReceived(list: [Movie]) {
         movieList = list

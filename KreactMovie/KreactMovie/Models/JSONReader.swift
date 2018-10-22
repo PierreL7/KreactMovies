@@ -92,7 +92,7 @@ class JSONReader: NSObject {
     var crewDelegate : CrewDelegate?
     var trailerDelegate : TrailerDelegate?
     
-    func decodeSimilarMovies(withData: Data) {
+    func decodeSimilarMovies(withData: Data) -> Bool {
         var movieList = [Movie]()
         do {
             let movies = try JSONDecoder().decode(SimilarMovies.self, from: withData)
@@ -106,10 +106,12 @@ class JSONReader: NSObject {
             movieDelegate?.movieListReceived(list: movieList)
         } catch let jsonErr {
             print(jsonErr)
+            return false
         }
+        return true
     }
     
-    func decodeCurrentMovies(withData: Data) {
+    func decodeCurrentMovies(withData: Data) -> Bool {
         var movieList = [Movie]()
         do {
             let movies = try JSONDecoder().decode(Movies.self, from: withData)
@@ -129,10 +131,12 @@ class JSONReader: NSObject {
             movieDelegate?.movieListReceived(list: movieList)
         } catch let jsonErr {
             print(jsonErr)
+            return false
         }
+        return true
     }
     
-    func decodeMovieCredits(withData: Data) {
+    func decodeMovieCredits(withData: Data) -> Bool {
         var actorList = [Actor]()
         var crewMemberList = [CrewMember]()
         do {
@@ -154,10 +158,12 @@ class JSONReader: NSObject {
             crewDelegate?.crewReceived(actorList: actorList, crewMemberList: crewMemberList)
         } catch let jsonErr {
             print(jsonErr)
+            return false
         }
+        return true
     }
     
-    func decodeTrailer(withData: Data) {
+    func decodeTrailer(withData: Data) -> Bool {
         do {
             let trailers = try JSONDecoder().decode(Trailer.self, from: withData)
             if let videoKey = trailers.results.first?.key {
@@ -165,6 +171,8 @@ class JSONReader: NSObject {
             }
         } catch let jsonErr {
             print(jsonErr)
+            return false
         }
+        return true
     }
 }

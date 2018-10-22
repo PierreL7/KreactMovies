@@ -32,7 +32,7 @@ class CastingCollectionView: UICollectionView, UICollectionViewDelegate, UIColle
         cell.actorPicture.image = actors[indexPath.row].Picture
         cell.actorName.text = actors[indexPath.row].Name
         cell.characterName.text = actors[indexPath.row].Character
-        
+        cell.layoutSubviews()
         return cell
     }
 }
