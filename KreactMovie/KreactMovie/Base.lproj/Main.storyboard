@@ -576,7 +576,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="124"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Movie Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZE-9O-PCS">
-                                        <rect key="frame" x="238.5" y="49.5" width="112.5" height="25"/>
+                                        <rect key="frame" x="238.5" y="47.5" width="112.5" height="29"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -598,7 +598,7 @@
                                     <constraint firstItem="PQ4-Js-HdQ" firstAttribute="top" secondItem="L05-gr-GPk" secondAttribute="top" id="3Pz-Yw-aCs"/>
                                     <constraint firstItem="8Jk-T1-LRi" firstAttribute="leading" secondItem="L05-gr-GPk" secondAttribute="leading" constant="17" id="8g2-j0-mpz"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="width" secondItem="L05-gr-GPk" secondAttribute="width" multiplier="0.3" id="9B4-Jq-nGh"/>
-                                    <constraint firstItem="JZE-9O-PCS" firstAttribute="height" secondItem="L05-gr-GPk" secondAttribute="height" multiplier="0.2" id="9gN-nY-PsL"/>
+                                    <constraint firstItem="JZE-9O-PCS" firstAttribute="height" secondItem="L05-gr-GPk" secondAttribute="height" multiplier="0.23" id="9gN-nY-PsL"/>
                                     <constraint firstItem="8Jk-T1-LRi" firstAttribute="width" secondItem="L05-gr-GPk" secondAttribute="height" multiplier="30:47" id="UYP-vy-l4g"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="leading" secondItem="PQ4-Js-HdQ" secondAttribute="trailing" constant="8" symbolic="YES" id="VMn-XO-zRJ"/>
                                     <constraint firstItem="JZE-9O-PCS" firstAttribute="centerY" secondItem="L05-gr-GPk" secondAttribute="centerY" id="cVP-6N-Qsy"/>
